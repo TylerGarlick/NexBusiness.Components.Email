@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "NexBusiness.Components.Email.Azure", "NexBusiness.Components.Email.Azure\NexBusiness.Components.Email.Azure.ccproj", "{E579E421-3B34-4586-9C9F-6C19F3158350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Worker", "NexBusiness.Mail.Worker\NexBusiness.Mail.Worker.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7C3B4ACC-EE11-417F-A033-761C763569B1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".azure", ".azure", "{06FC21BD-A521-4A9E-B8AE-71DD14F26FC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6F4C6FA5-9D04-48EF-95F9-71B608C6F51A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{604AF9AF-FA69-49F4-8AB5-3A0FB7EF71D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{035728B9-8554-4015-B3F2-C22F942D30D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Data.Core", "NexBusiness.Mail.Data.Core\NexBusiness.Mail.Data.Core.csproj", "{6CC466F5-9A25-400A-AA0A-ABE6A088C009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Repositories.Common", "NexBusiness.Mail.Repositories.Common\NexBusiness.Mail.Repositories.Common.csproj", "{CF1A6DC0-78BE-47C1-A5B5-FDC68A246D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Repositories.RavenDb", "NexBusiness.Mail.Repositories.RavenDb\NexBusiness.Mail.Repositories.RavenDb.csproj", "{D626A8B8-9945-4EF2-982C-BD0D52DFD370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Services.Common", "NexBusiness.Mail.Services.Common\NexBusiness.Mail.Services.Common.csproj", "{D7D67334-FEC9-4E85-B8DD-4C024B69D339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Services.Core", "NexBusiness.Mail.Services.Core\NexBusiness.Mail.Services.Core.csproj", "{9200B3C5-B63F-44F8-BB94-3B8E4D222846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail", "NexBusiness.Mail\NexBusiness.Mail.csproj", "{4324BEF2-6DBC-49CD-9DAB-C10089F41B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Models", "NexBusiness.Mail.Models\NexBusiness.Mail.Models.csproj", "{954DD0F4-0E3A-4A4E-856B-0B8A584AA004}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Services.ConsoleApp", "NexBusiness.Mail.Services.ConsoleApp\NexBusiness.Mail.Services.ConsoleApp.csproj", "{9D1250F8-04B7-4E4F-BC12-8A047646736B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E579E421-3B34-4586-9C9F-6C19F3158350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E579E421-3B34-4586-9C9F-6C19F3158350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E579E421-3B34-4586-9C9F-6C19F3158350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E579E421-3B34-4586-9C9F-6C19F3158350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC466F5-9A25-400A-AA0A-ABE6A088C009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC466F5-9A25-400A-AA0A-ABE6A088C009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC466F5-9A25-400A-AA0A-ABE6A088C009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC466F5-9A25-400A-AA0A-ABE6A088C009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1A6DC0-78BE-47C1-A5B5-FDC68A246D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1A6DC0-78BE-47C1-A5B5-FDC68A246D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1A6DC0-78BE-47C1-A5B5-FDC68A246D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1A6DC0-78BE-47C1-A5B5-FDC68A246D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D626A8B8-9945-4EF2-982C-BD0D52DFD370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D626A8B8-9945-4EF2-982C-BD0D52DFD370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D626A8B8-9945-4EF2-982C-BD0D52DFD370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D626A8B8-9945-4EF2-982C-BD0D52DFD370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D67334-FEC9-4E85-B8DD-4C024B69D339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D67334-FEC9-4E85-B8DD-4C024B69D339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D67334-FEC9-4E85-B8DD-4C024B69D339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D67334-FEC9-4E85-B8DD-4C024B69D339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9200B3C5-B63F-44F8-BB94-3B8E4D222846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9200B3C5-B63F-44F8-BB94-3B8E4D222846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9200B3C5-B63F-44F8-BB94-3B8E4D222846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9200B3C5-B63F-44F8-BB94-3B8E4D222846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4324BEF2-6DBC-49CD-9DAB-C10089F41B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4324BEF2-6DBC-49CD-9DAB-C10089F41B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4324BEF2-6DBC-49CD-9DAB-C10089F41B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4324BEF2-6DBC-49CD-9DAB-C10089F41B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{954DD0F4-0E3A-4A4E-856B-0B8A584AA004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954DD0F4-0E3A-4A4E-856B-0B8A584AA004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954DD0F4-0E3A-4A4E-856B-0B8A584AA004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{954DD0F4-0E3A-4A4E-856B-0B8A584AA004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1250F8-04B7-4E4F-BC12-8A047646736B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1250F8-04B7-4E4F-BC12-8A047646736B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1250F8-04B7-4E4F-BC12-8A047646736B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1250F8-04B7-4E4F-BC12-8A047646736B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E579E421-3B34-4586-9C9F-6C19F3158350} = {06FC21BD-A521-4A9E-B8AE-71DD14F26FC7}
+		{6CC466F5-9A25-400A-AA0A-ABE6A088C009} = {6F4C6FA5-9D04-48EF-95F9-71B608C6F51A}
+		{CF1A6DC0-78BE-47C1-A5B5-FDC68A246D8D} = {604AF9AF-FA69-49F4-8AB5-3A0FB7EF71D6}
+		{D626A8B8-9945-4EF2-982C-BD0D52DFD370} = {604AF9AF-FA69-49F4-8AB5-3A0FB7EF71D6}
+		{D7D67334-FEC9-4E85-B8DD-4C024B69D339} = {035728B9-8554-4015-B3F2-C22F942D30D4}
+		{9200B3C5-B63F-44F8-BB94-3B8E4D222846} = {035728B9-8554-4015-B3F2-C22F942D30D4}
+		{9D1250F8-04B7-4E4F-BC12-8A047646736B} = {035728B9-8554-4015-B3F2-C22F942D30D4}
+	EndGlobalSection
+EndGlobal
