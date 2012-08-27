@@ -16,7 +16,7 @@ namespace NexBusiness.Mail
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Help", action = "Index", id = UrlParameter.Optional, area = "Help" }
+                defaults: new { controller = "Pages", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

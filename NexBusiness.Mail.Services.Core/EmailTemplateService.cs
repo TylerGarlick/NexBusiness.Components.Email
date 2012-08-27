@@ -34,6 +34,15 @@ namespace NexBusiness.Mail.Services.Core
             return null;
         }
 
+        public EmailTemplate GetEmailTemplateBySubject(Guid realmToken, string subject)
+        {
+            var realm = RealmRepository.ByKey(realmToken);
+            if (realm != null)
+                return realm.EmailTemplates.FirstOrDefault(e => e.Subject.Equals(subject, StringComparison.InvariantCultureIgnoreCase));
+
+            return null;
+        }
+
         public EmailTemplate Save(Guid realmToken, EmailTemplate emailTemplate)
         {
             using (var transaction = new TransactionScope())

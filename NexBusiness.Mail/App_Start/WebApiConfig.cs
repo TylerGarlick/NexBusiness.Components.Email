@@ -10,9 +10,28 @@ namespace NexBusiness.Mail
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/v1/{realmKey}/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                name: "EmailTemplatesBySubject",
+                routeTemplate: "api/v1/{realmKey}/EmailTemplates/BySubject/{id}",
+                defaults: new { id = RouteParameter.Optional, controller = "EmailTemplates", action="GetBySubject" }
+            );
+
+
+            config.Routes.MapHttpRoute(
+                name: "EmailTemplates",
+                routeTemplate: "api/v1/{realmKey}/EmailTemplates/{id}",
+                defaults: new { id = RouteParameter.Optional, controller="EmailTemplates" }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "Emails",
+                routeTemplate: "api/v1/{realmKey}/EmailTemplates/{emailTemplateId}/Emails/{id}",
+                defaults: new { id = RouteParameter.Optional, controller = "Emails" }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "Realms",
+                routeTemplate: "api/v1/Realms/{id}",
+                defaults: new { id = RouteParameter.Optional, controller = "Realms" }
             );
         }
     }

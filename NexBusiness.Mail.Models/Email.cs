@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace NexBusiness.Mail.Models
 {
@@ -13,9 +14,11 @@ namespace NexBusiness.Mail.Models
 
         public string Id { get; set; }
 
+        [Required]
         public List<Recipient> Recipients { get; set; }
 
-        public Dictionary<string, string> Fields { get; set; }
+        [Required]
+        public Dictionary<string, string> Fields { get; set; }  
 
         public string HtmlResult { get; set; }
 

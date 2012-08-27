@@ -20,7 +20,7 @@ namespace NexBusiness.Mail.Services.Core
             return EmailRepository.All();
         }
 
-        public Email GetRealmById(string id)
+        public Email GetEmailById(string id)
         {
             return EmailRepository.ById(id);
         }

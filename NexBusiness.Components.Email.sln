@@ -36,6 +36,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Models", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Services.ConsoleApp", "NexBusiness.Mail.Services.ConsoleApp\NexBusiness.Mail.Services.ConsoleApp.csproj", "{9D1250F8-04B7-4E4F-BC12-8A047646736B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBusiness.Mail.Client.Core", "NexBusiness.Mail.Client\NexBusiness.Mail.Client.Core.csproj", "{4892A959-237F-4AEC-B264-3C6E5333974C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{D5F34393-2538-497C-884F-DC71296AEEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConsole", "ClientConsole\ClientConsole.csproj", "{7E179869-4775-4446-B7C1-86C396D9AB51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +88,14 @@ Global
 		{9D1250F8-04B7-4E4F-BC12-8A047646736B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D1250F8-04B7-4E4F-BC12-8A047646736B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D1250F8-04B7-4E4F-BC12-8A047646736B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4892A959-237F-4AEC-B264-3C6E5333974C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4892A959-237F-4AEC-B264-3C6E5333974C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4892A959-237F-4AEC-B264-3C6E5333974C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4892A959-237F-4AEC-B264-3C6E5333974C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E179869-4775-4446-B7C1-86C396D9AB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E179869-4775-4446-B7C1-86C396D9AB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E179869-4775-4446-B7C1-86C396D9AB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E179869-4775-4446-B7C1-86C396D9AB51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,5 +108,7 @@ Global
 		{D7D67334-FEC9-4E85-B8DD-4C024B69D339} = {035728B9-8554-4015-B3F2-C22F942D30D4}
 		{9200B3C5-B63F-44F8-BB94-3B8E4D222846} = {035728B9-8554-4015-B3F2-C22F942D30D4}
 		{9D1250F8-04B7-4E4F-BC12-8A047646736B} = {035728B9-8554-4015-B3F2-C22F942D30D4}
+		{4892A959-237F-4AEC-B264-3C6E5333974C} = {D5F34393-2538-497C-884F-DC71296AEEA7}
+		{7E179869-4775-4446-B7C1-86C396D9AB51} = {D5F34393-2538-497C-884F-DC71296AEEA7}
 	EndGlobalSection
 EndGlobal

@@ -19,6 +19,9 @@ namespace NexBusiness.Mail.Models
         [Required, Display(Name = "From Email"), DataType(DataType.EmailAddress)]
         public string SentFromEmail { get; set; }
 
+        [Required, Display(Name = "Subject"), DataType(DataType.EmailAddress)]
+        public string Subject { get; set; }
+
         [Required, Display(Name = "Html Source"), DataType(DataType.EmailAddress)]
         public string Html { get; set; }
 

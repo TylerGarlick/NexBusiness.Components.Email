@@ -6,7 +6,7 @@ namespace NexBusiness.Mail.Services.Common
     public interface IEmailService
     {
         IEnumerable<Email> GetAllEmails();
-        Email GetRealmById(string id);
+        Email GetEmailById(string id);
         Email Save(Email email);
         void Delete(string id);
     }

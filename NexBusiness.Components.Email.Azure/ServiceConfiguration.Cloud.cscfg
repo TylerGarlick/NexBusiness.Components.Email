@@ -3,14 +3,29 @@
   <Role name="NexBusiness.Mail.Worker">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://[your namespace].servicebus.windows.net;SharedSecretIssuer=owner;SharedSecretValue=[your secret]" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=apixfactorhoops;AccountKey=BFUPlhb9s71du8sz+ITx9jN+SCV53jU/towHnxTNku94z9XHkWqVwcSSwDUjNi3ExjvNnsmVeaWCzoGmdTK+dQ==" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://nexbusiness.servicebus.windows.net;SharedSecretIssuer=owner;SharedSecretValue=qbu29vNzL1C7ECZ3eaF9gri8CiJZ2LUwNQdeTwkhkPY=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="NexBusiness" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEAewBTsz0FWWQdeXVSJhMPAwDQYJKoZIhvcNAQEBBQAEggEAENdMyy67VFiCidqpWpOScKirZgZZW52hNQrNAVEPdn2a0Zw0qf6BZeVuJn/N3CbGIvhmxFwOk/2WQh11ZPFhT6QOsPmIawi2ao0ETM85uwMiUAgMaop+tZpqnIwzYLR3Dv18p7DTutDeqXoZfkVmWF4SH3i7zUKDBZjZx1jMNFkRm64ZBxjcWq/pQN0rFrEoi2RdplWXBNhSgk4qvJl1c9ADIyhfoDMPT0Sws5yUjZ4GQku26YBiXoWvHTyv55tslp1yORMmMVbRzXoiN2C8E5JNK3bXhTYTqfkoK5rCpeC2qKYzuBmxQyBeDImlxplPhQ7sn7Hp4Ia6E6dINGEP2jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECGHaLswJJAKKgBDM/XyYWoqwJMGV2txuBZE1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-08-23T23:59:59.0000000-06:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="0AD69CC9EF345B747E2938CDB634922BDAD3CCD6" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
   <Role name="NexBusiness.Mail">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=apixfactorhoops;AccountKey=BFUPlhb9s71du8sz+ITx9jN+SCV53jU/towHnxTNku94z9XHkWqVwcSSwDUjNi3ExjvNnsmVeaWCzoGmdTK+dQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="NexBusiness" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEAewBTsz0FWWQdeXVSJhMPAwDQYJKoZIhvcNAQEBBQAEggEAENdMyy67VFiCidqpWpOScKirZgZZW52hNQrNAVEPdn2a0Zw0qf6BZeVuJn/N3CbGIvhmxFwOk/2WQh11ZPFhT6QOsPmIawi2ao0ETM85uwMiUAgMaop+tZpqnIwzYLR3Dv18p7DTutDeqXoZfkVmWF4SH3i7zUKDBZjZx1jMNFkRm64ZBxjcWq/pQN0rFrEoi2RdplWXBNhSgk4qvJl1c9ADIyhfoDMPT0Sws5yUjZ4GQku26YBiXoWvHTyv55tslp1yORMmMVbRzXoiN2C8E5JNK3bXhTYTqfkoK5rCpeC2qKYzuBmxQyBeDImlxplPhQ7sn7Hp4Ia6E6dINGEP2jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECGHaLswJJAKKgBDM/XyYWoqwJMGV2txuBZE1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-08-23T23:59:59.0000000-06:00" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="0AD69CC9EF345B747E2938CDB634922BDAD3CCD6" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>

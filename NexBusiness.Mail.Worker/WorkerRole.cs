@@ -10,18 +10,25 @@ using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.StorageClient;
+using NexBusiness.Mail.Services.Core.Configuration.Ninject;
+using Ninject;
+using Ninject.Modules;
+using NexBusiness.Mail.Services.Common;
 
 namespace NexBusiness.Mail.Worker
 {
     public class WorkerRole : RoleEntryPoint
     {
         // The name of your queue
-        const string QueueName = "ProcessingQueue";
+        const string QueueName = "nexbusiness.mail";
 
         // QueueClient is thread-safe. Recommended that you cache 
         // rather than recreating it on every request
         QueueClient Client;
         bool IsStopped;
+
+
+        public IKernel Kernel { get; set; }
 
         public override void Run()
         {
@@ -35,7 +42,11 @@ namespace NexBusiness.Mail.Worker
 
                     if (receivedMessage != null)
                     {
-                        // Process the message
+                        var emailId = (string)receivedMessage.Properties["EmailId"];
+                        var emailTemplateId = (string)receivedMessage.Properties["EmailTemplateId"];
+                        var realmToken = (Guid)receivedMessage.Properties["RealmToken"];
+                        var processEmail = new ProcessEmail(realmToken, emailTemplateId, emailId, Kernel.Get<IEmailService>(), Kernel.Get<IEmailTemplateService>());
+                        
                         Trace.WriteLine("Processing", receivedMessage.SequenceNumber.ToString());
                         receivedMessage.Complete();
                     }
@@ -77,6 +88,8 @@ namespace NexBusiness.Mail.Worker
             // Initialize the connection to Service Bus Queue
             Client = QueueClient.CreateFromConnectionString(connectionString, QueueName);
             IsStopped = false;
+
+            Kernel = new StandardKernel(new INinjectModule[] { new CoreServicesNinjectModule() });
             return base.OnStart();
         }
 

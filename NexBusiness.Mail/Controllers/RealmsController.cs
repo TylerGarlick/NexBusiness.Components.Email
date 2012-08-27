@@ -9,7 +9,7 @@ using NexBusiness.Mail.Helpers;
 
 namespace NexBusiness.Mail.Controllers
 {
-    [Validate] 
+    [Validate]
     public class RealmsController : ApiController
     {
         protected IRealmService RealmService { get; private set; }
@@ -26,6 +26,18 @@ namespace NexBusiness.Mail.Controllers
                 return Mapper.DynamicMap<BasicRealm>(realm);
 
             throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.NotFound, string.Format("Realm with key {0} was not found", id)));
+        }
+
+        public BasicRealm Post([FromBody] string name)
+        {
+            var realm = new Data.Core.Realm()
+                        {
+                            Key = Guid.NewGuid(),
+                            Name = name
+                        };
+
+            realm = RealmService.Save(realm);
+            return Mapper.DynamicMap<BasicRealm>(realm);
         }
     }
 }
